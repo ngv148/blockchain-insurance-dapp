@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Claim Policy</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>🛡 Blockchain Insurance DApp</h2>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="buy.html">Buy Policy</a>
+
+<a href="mypolicies.html">My Policies</a>
+
+<a href="claim.html">Claim</a>
+
+</nav>
+
+<button id="connectBtn">Connect MetaMask</button>
+
+</header>
+
+<form id="claimForm">
+
+<h2>Insurance Claim Form</h2>
+
+<label>Policy ID</label>
+<input type="text" id="policyId" placeholder="Enter Policy ID" required>
+
+<label>Policy Name</label>
+<input type="text" id="policy" readonly>
+
+<label>Customer Name</label>
+<input type="text" id="name" readonly>
+
+<label>Claim Amount (₹)</label>
+<input type="number" id="amount" required>
+
+<label>Reason for Claim</label>
+<textarea id="reason" rows="4" required></textarea>
+
+<label>Incident Date</label>
+<input type="date" id="date" required>
+
+<label>Upload Proof (Image/PDF)</label>
+<input type="file" id="proof">
+
+<br><br>
+
+<button type="submit">Submit Claim</button>
+
+</form>
+
+<script>
+
+document.getElementById("policy").value =
+localStorage.getItem("policyType");
+
+document.getElementById("policyId").value =
+localStorage.getItem("policyId");
+
+document.getElementById("name").value =
+localStorage.getItem("customerName");
+
+document.getElementById("claimForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("Claim Submitted Successfully!");
+
+window.location.href="mypolicies.html";
+
+});
+
+</script>
+
+<script src="js/metamask.js"></script>
+
+<script src="js/claim.js"></script>
+
+</body>
+
+</html>

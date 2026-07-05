@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Insurance Policy</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+</head>
+
+<body>
+
+<header>
+
+    <h2>🛡 Blockchain Insurance DApp</h2>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="buy.html">Buy Policy</a>
+        <a href="mypolicies.html">My Policies</a>
+        <a href="claim.html">Claim</a>
+    </nav>
+
+    <button id="connectBtn">Connect MetaMask</button>
+
+</header>
+
+<center>
+    <h1 style="margin-top:20px;">Choose Your Insurance Policy</h1>
+    <p>Select a policy and click Buy Policy.</p>
+</center>
+
+<div class="policy-container">
+
+    <div class="policy-card">
+        <h3>🏥 Health Insurance</h3>
+        <p><b>Premium:</b> 0.02 ETH</p>
+        <p><b>Coverage:</b> ₹5,00,000</p>
+        <p><b>Validity:</b> 1 Year</p>
+        <p><b>Benefits:</b> Hospitalization & Emergency Care</p>
+        <button onclick="buyPolicy('Health Insurance')">Buy Policy</button>
+    </div>
+
+    <div class="policy-card">
+        <h3>❤️ Life Insurance</h3>
+        <p><b>Premium:</b> 0.03 ETH</p>
+        <p><b>Coverage:</b> ₹10,00,000</p>
+        <p><b>Validity:</b> 5 Years</p>
+        <p><b>Benefits:</b> Family Financial Protection</p>
+        <button onclick="buyPolicy('Life Insurance')">Buy Policy</button>
+    </div>
+
+    <div class="policy-card">
+        <h3>🚗 Car Insurance</h3>
+        <p><b>Premium:</b> 0.025 ETH</p>
+        <p><b>Coverage:</b> ₹8,00,000</p>
+        <p><b>Validity:</b> 1 Year</p>
+        <p><b>Benefits:</b> Accident & Theft Protection</p>
+        <button onclick="buyPolicy('Car Insurance')">Buy Policy</button>
+    </div>
+
+    <div class="policy-card">
+        <h3>🏍 Bike Insurance</h3>
+        <p><b>Premium:</b> 0.01 ETH</p>
+        <p><b>Coverage:</b> ₹2,00,000</p>
+        <p><b>Validity:</b> 1 Year</p>
+        <p><b>Benefits:</b> Damage & Accident Cover</p>
+        <button onclick="buyPolicy('Bike Insurance')">Buy Policy</button>
+    </div>
+
+    <div class="policy-card">
+        <h3>🏠 Home Insurance</h3>
+        <p><b>Premium:</b> 0.04 ETH</p>
+        <p><b>Coverage:</b> ₹20,00,000</p>
+        <p><b>Validity:</b> 3 Years</p>
+        <p><b>Benefits:</b> Fire & Natural Disaster Cover</p>
+        <button onclick="buyPolicy('Home Insurance')">Buy Policy</button>
+    </div>
+
+    <div class="policy-card">
+        <h3>✈ Travel Insurance</h3>
+        <p><b>Premium:</b> 0.015 ETH</p>
+        <p><b>Coverage:</b> ₹3,00,000</p>
+        <p><b>Validity:</b> Trip Duration</p>
+        <p><b>Benefits:</b> Medical & Baggage Protection</p>
+        <button onclick="buyPolicy('Travel Insurance')">Buy Policy</button>
+    </div>
+
+    <div class="policy-card">
+        <h3>📱 Mobile Insurance</h3>
+        <p><b>Premium:</b> 0.01 ETH</p>
+        <p><b>Coverage:</b> ₹50,000</p>
+        <p><b>Validity:</b> 1 Year</p>
+        <p><b>Benefits:</b> Screen & Theft Protection</p>
+        <button onclick="buyPolicy('Mobile Insurance')">Buy Policy</button>
+    </div>
+
+    <div class="policy-card">
+        <h3>💻 Laptop Insurance</h3>
+        <p><b>Premium:</b> 0.02 ETH</p>
+        <p><b>Coverage:</b> ₹1,00,000</p>
+        <p><b>Validity:</b> 2 Years</p>
+        <p><b>Benefits:</b> Damage & Theft Cover</p>
+        <button onclick="buyPolicy('Laptop Insurance')">Buy Policy</button>
+    </div>
+
+    <div class="policy-card">
+        <h3>🌾 Crop Insurance</h3>
+        <p><b>Premium:</b> 0.02 ETH</p>
+        <p><b>Coverage:</b> ₹4,00,000</p>
+        <p><b>Validity:</b> Crop Season</p>
+        <p><b>Benefits:</b> Flood & Drought Protection</p>
+        <button onclick="buyPolicy('Crop Insurance')">Buy Policy</button>
+    </div>
+
+    <div class="policy-card">
+        <h3>🌐 Cyber Insurance</h3>
+        <p><b>Premium:</b> 0.010 ETH</p>
+        <p><b>Coverage:</b> ₹6,00,000</p>
+        <p><b>Validity:</b> 1 Year</p>
+        <p><b>Benefits:</b> Online Fraud & Cyber Attack Cover</p>
+        <button onclick="buyPolicy('Cyber Insurance')">Buy Policy</button>
+    </div>
+
+</div>
+
+<script>
+function buyPolicy(policyName){
+    localStorage.setItem("policyType", policyName);
+    window.location.href = "policy-form.html";
+}
+</script>
+
+<script src="js/metamask.js"></script>
+<script src="js/buy.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Policies</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>🛡 Blockchain Insurance DApp</h2>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="buy.html">Buy Policy</a>
+
+<a href="mypolicies.html">My Policies</a>
+
+<a href="claim.html">Claim</a>
+
+</nav>
+
+<button id="connectBtn">Connect MetaMask</button>
+
+</header>
+
+<br>
+
+<center>
+
+<h1>My Purchased Policy</h1>
+
+</center>
+
+<table>
+
+<tr>
+<th>Policy ID</th>
+
+<th>Policy</th>
+
+<th>Customer Name</th>
+
+<th>Age</th>
+
+<th>Status</th>
+
+<th>Claim</th>
+
+</tr>
+
+<tr>
+<td id="policyId"></td>
+
+<td id="policy"></td>
+
+<td id="name"></td>
+
+<td id="age"></td>
+
+<td style="color:green;"><b>Active</b></td>
+
+<td>
+
+<a href="claim.html">
+
+<button style="padding:8px 15px;background:green;color:white;border:none;border-radius:5px;cursor:pointer;">
+
+Claim
+
+</button>
+
+</a>
+
+</td>
+
+</tr>
+
+</table>
+
+<script>
+document.getElementById("policyId").innerHTML =
+localStorage.getItem("policyId");
+
+document.getElementById("policy").innerHTML =
+localStorage.getItem("policyType");
+
+document.getElementById("name").innerHTML =
+localStorage.getItem("customerName");
+
+document.getElementById("age").innerHTML =
+localStorage.getItem("customerAge");
+
+</script>
+
+<script src="js/metamask.js"></script>
+
+<script src="js/mypolicy.js"></script>
+
+</body>
+
+</html>

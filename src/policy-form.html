@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Policy Details</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h2>🛡 Blockchain Insurance DApp</h2>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="buy.html">Buy Policy</a>
+        <a href="mypolicies.html">My Policies</a>
+        <a href="claim.html">Claim</a>
+      </nav>
+
+      <button id="connectBtn">Connect MetaMask</button>
+    </header>
+
+    <form id="policyForm">
+      <h2>Insurance Application Form</h2>
+
+      <label>Selected Policy</label>
+      <input type="text" id="policyType" readonly />
+
+      <label>Full Name</label>
+      <input type="text" id="name" required />
+
+      <label>Age</label>
+      <input type="number" id="age" required />
+
+      <label>Gender</label>
+      <select id="gender" required>
+        <option value="">Select Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+
+      <label>Phone Number</label>
+      <input type="tel" id="phone" required />
+
+      <label>Email</label>
+      <input type="email" id="email" required />
+
+      <label>Address</label>
+      <textarea id="address" rows="3" required></textarea>
+
+      <label>Aadhaar Number</label>
+      <input type="text" id="aadhaar" required />
+
+      <label>Nominee Name</label>
+      <input type="text" id="nominee" required />
+
+      <label>Policy Duration</label>
+      <select id="duration" required>
+        <option>1 Year</option>
+        <option>2 Years</option>
+        <option>3 Years</option>
+        <option>5 Years</option>
+      </select>
+
+      <label>
+        <input type="checkbox" required />
+        I agree to the Terms & Conditions
+      </label>
+
+      <br /><br />
+
+      <button type="submit">Buy Policy using MetaMask</button>
+    </form>
+
+    <script>
+      document.getElementById("policyType").value =
+        localStorage.getItem("policyType");
+
+      document
+        .getElementById("policyForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          localStorage.setItem(
+            "customerName",
+            document.getElementById("name").value,
+          );
+
+          localStorage.setItem(
+            "customerAge",
+            document.getElementById("age").value,
+          );
+
+          const policyId = "POL" + Date.now();
+          localStorage.setItem("policyId", policyId);
+
+          if (!window.ethereum) {
+            alert("Please install MetaMask.");
+            return;
+          }
+
+          try {
+            const accounts = await ethereum.request({
+              method: "eth_requestAccounts",
+            });
+
+            await ethereum.request({
+              method: "eth_sendTransaction",
+              params: [
+                {
+                  from: accounts[0],
+                  to: accounts[0],
+                  value: "0x2386F26FC10000", // 0.01 ETH
+                },
+              ],
+            });
+
+            alert("Payment Successful!");
+
+            window.location.href = "mypolicies.html";
+          } catch (err) {
+            alert("Transaction Cancelled");
+
+            console.log(err);
+          }
+        });
+    </script>
+
+    <script src="js/metamask.js"></script>
+    <script src="js/form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+
+    <script src="js/metamask.js"></script>
+
+    <script src="js/contract.js"></script>
+
+    <script src="js/form.js"></script>
+  </body>
+</html>
