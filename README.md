@@ -269,10 +269,9 @@ truffle migrate --reset
 ## Step 3
 
 Open
-
+<img width="1880" height="883" alt="Screenshot 2026-07-08 120230" src="https://github.com/user-attachments/assets/3a721e32-5abf-496c-a073-4a2b78b41d71" />
 ```
 index.html
-<img width="1880" height="883" alt="Screenshot 2026-07-08 120230" src="https://github.com/user-attachments/assets/3a721e32-5abf-496c-a073-4a2b78b41d71" />
 
 ```
 
@@ -283,11 +282,10 @@ using Live Server.
 ## Step 4
 
 Click
+<img width="553" height="822" alt="Screenshot 2026-07-08 115944" src="https://github.com/user-attachments/assets/4adba0c7-30cb-4af3-b9a3-cd23371f513a" />
 
 ```
 Connect MetaMask
-<img width="553" height="822" alt="Screenshot 2026-07-08 115944" src="https://github.com/user-attachments/assets/4adba0c7-30cb-4af3-b9a3-cd23371f513a" />
-
 ```
 
 Approve the connection.
@@ -297,13 +295,11 @@ Approve the connection.
 ## Step 5
 
 Click
-
-```
-Buy Insurance
 <img width="1890" height="883" alt="Screenshot 2026-07-08 120242" src="https://github.com/user-attachments/assets/d7a18e8d-5714-46bc-911e-f168c5be3448" />
 
 ```
-
+Buy Insurance
+```
 ---
 
 ## Step 6
@@ -340,9 +336,9 @@ Click
 
 ```
 Buy Policy using MetaMask
-```
 <img width="1887" height="892" alt="Screenshot 2026-07-08 120408" src="https://github.com/user-attachments/assets/ffabeef6-ae5c-49bb-b4ca-243ed54fe3e6" />
 
+```
 ---
 
 ## Step 9
@@ -353,8 +349,9 @@ Click
 
 ```
 Confirm
-```
 <img width="1900" height="877" alt="Screenshot 2026-07-08 120436" src="https://github.com/user-attachments/assets/f2ec6e1a-887d-4370-8a9b-92f27ef9c79f" />
+
+```
 
 ---
 
@@ -368,8 +365,9 @@ Example
 
 ```
 POL1783492428567
-```
 <img width="564" height="823" alt="Screenshot 2026-07-08 120449" src="https://github.com/user-attachments/assets/c70e2a2c-dd40-4d0c-8706-586e71b64775" />
+
+```
 
 ---
 
@@ -379,10 +377,11 @@ Open
 
 ```
 My Policies
+<img width="1881" height="829" alt="image" src="https://github.com/user-attachments/assets/59037f2a-b407-44db-b59f-10b5254eae4a" />
+
 ```
 
 Purchased policy details appear.
-<img width="1881" height="829" alt="image" src="https://github.com/user-attachments/assets/59037f2a-b407-44db-b59f-10b5254eae4a" />
 
 ---
 
